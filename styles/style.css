@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -52,15 +55,9 @@ button {
   white-space: nowrap;
 } 
 
-.page {
-  display: flex;
-  justify-content: center;
-}
-
 .content {
   max-width: 1200px;
-  max-height: 534px;
-  height: 100%;
+  min-height: 534px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -72,8 +69,7 @@ button {
 .result {
   max-width: 711px;
   width: 100%;
-  max-height: 456px;
-  height: 100%;
+  min-height: 456px;
 }
 
 .result__video-container {
@@ -88,6 +84,7 @@ button {
 .result__video {
   width: 100%;
   height: 100%;
+  object-fit: fill;
 }
 
 .search-form {
@@ -98,8 +95,6 @@ button {
 
 .content__details {
   max-width: 399px;
-  min-height: 298px;
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -111,16 +106,12 @@ button {
   width: 100%;
   max-height: 298px;
   height: 100%;
-  overflow: scroll;
+  overflow: auto;
   position: relative;
   z-index: 1;
 }
 
-.content__video-card {
-  max-width: 390px;
-  width: 100%;    
-  max-height: 107px;
-  height: 100%;   
+.content__video-card {  
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -130,34 +121,24 @@ button {
   margin-top: 30px;
 }
 
-.content__video-card-description-container {
-  max-width: 200px;
-  max-height: 101px;
-  width: 100%;
-  height: 100%;
-}
-
-.content__video-card-description-container:active {
-  background-color: #545050;
-}
-
-.content__list-item:focus {
-  outline: none;
-}
-
-.content__list-item:has(:focus-visible) {
-  outline: 1px solid #fff;
-  margin: 2px;
-}
 
 .content__card-link {
+  display: block;
   text-decoration: none;
   color: #fff;
   margin: 2px;
 }
 
-.content__card-link:focus {
+.content__video-card:active {
+  background: #545050;
+}
+
+.content__card-link:focus{
   outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
 }
 
 .content__video-card-thumbnail {
@@ -165,18 +146,18 @@ button {
   max-height: 103px;
   width: 100%;
   height: 100%;
+  object-fit: fill;
 }
 
 .search-form__fieldset-title {
   color: #fff;
+  font-size: 18px;
   font-weight: 400;
 }
 
 .title {
-  max-height: 210px;
-  height: 100%;
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 94%;
@@ -189,20 +170,23 @@ button {
 
 .content__video-card-title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%; 
-  text-transform: uppercase
-}
-
-.content__video-card-description-container:hover {
-  text-decoration: underline;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 215px;
 }
 
 .content__video-card-description {
+  color: #fff;
   margin-top: 6px;
   line-height: 16.2px;
+  max-width: 215px;
+  width: 100%;
 }
 
 .search-form__fieldset {
@@ -213,20 +197,17 @@ button {
 
 .search-form__textfield {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.70);
-  font-size: 16px;
   border: none;
+  color: #fff;
+  font-family: Fira Sans Condensed, sans-serif;
+  font-size: 18px;
   font-weight: 400;
   margin-top: 2.5px;
   appearance: none;
-  width: 211px;
+  width: 225px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   appearance: none;
-}
-
-.search-form__textfield:focus {
-  outline: none;
 }
 
 .search-form__textfield:focus-visible {
@@ -256,10 +237,6 @@ button {
   position: relative;
 }
 
-.search-form__label:focus {
-  outline: none;
-}
-
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
 }
@@ -278,7 +255,7 @@ button {
   left: 1px;
 }
 
-  .search-form__label-text:hover {
+.search-form__label:hover > .search-form__label-text {
     text-decoration: underline;
 }
 
@@ -289,10 +266,14 @@ button {
   font-size: 18px;
   font-weight: 700;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   padding-top: 6px;
   padding-bottom: 6px;
   cursor: pointer;
+}
+
+.button:hover {
+  text-decoration: underline;
 }
 
 .button:active {
@@ -300,9 +281,15 @@ button {
 }
 
 .button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
+
+
 
 .search-form__submit-button {
   padding-right: 73.5px;
