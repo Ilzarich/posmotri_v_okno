@@ -21,7 +21,6 @@
   opacity: 1;
   background: #fff;
   animation: focusfade 2.8s infinite;
-  font-weight: 400;
 }
 
 .preloader-chasing-squares .square:nth-child(2) {
