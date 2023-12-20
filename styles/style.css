@@ -321,7 +321,7 @@ button {
 
 
 .more-button {
-  block-size: 34px;
-  inline-size: 394px;
+  padding-left: 142px;
+  padding-right: 142px;
   margin: 2px;
 }
