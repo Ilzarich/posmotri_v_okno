@@ -313,5 +313,9 @@ button {
 
 
 .more-button {
-  width: 100%;
+  -webkit-padding-start: 142px;
+  -webkit-padding-end: 142px;
+  /* padding-left: 142px;
+  padding-right: 142px; */
+  margin: 2px;
 }
