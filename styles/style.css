@@ -117,6 +117,14 @@ button {
   z-index: 1;
 }
 
+.content__list::-webkit-scrollbar { 
+  width: 0; 
+}
+
+.content__list { 
+  -ms-overflow-style: none; 
+}
+
 .content__video-card {  
   display: flex;
   justify-content: space-between;
