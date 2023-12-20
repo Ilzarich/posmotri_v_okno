@@ -313,9 +313,7 @@ button {
 
 
 .more-button {
-  -webkit-padding-start: 142px;
-  -webkit-padding-end: 142px;
-  /* padding-left: 142px;
-  padding-right: 142px; */
+  block-size: 34px;
+  inline-size: 394px;
   margin: 2px;
 }
