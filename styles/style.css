@@ -309,8 +309,7 @@ button {
 
 
 .more-button {
-  display: block;
+  /* display: block; */
   width: 99%;
-  padding: 6px 20px; 
   margin: 2px; 
 }
