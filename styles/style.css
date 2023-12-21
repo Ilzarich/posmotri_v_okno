@@ -49,7 +49,7 @@ button {
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
-  overflow: hidden;
+  overflow: auto;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
@@ -68,8 +68,6 @@ button {
 .result {
   max-width: 711px;
   width: 100%;
-  max-height: 456px;
-  height: 100%;
   margin-bottom: 5px;
 }
 
@@ -93,9 +91,6 @@ button {
 
 .search-form {
   display: flex;
-  align-items: flex-end;
-  max-height: 54px;
-  height: 100%;
   gap: 40px;
 }
 
@@ -115,14 +110,6 @@ button {
   overflow: auto;
   position: relative;
   z-index: 1;
-}
-
-.content__list::-webkit-scrollbar { 
-  width: 0; 
-}
-
-.content__list { 
-  -ms-overflow-style: none; 
 }
 
 .content__video-card {  
@@ -218,14 +205,14 @@ button {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-bottom: 3px;
+  margin-top: 4px;
 }
 
 .search-form__textfield {
   background-color: transparent;
   border: none;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   appearance: none;
@@ -293,6 +280,7 @@ button {
   padding-top: 6px;
   padding-bottom: 6px;
   cursor: pointer;
+  
 }
 
 .button:hover {
@@ -321,7 +309,7 @@ button {
 
 
 .more-button {
-  padding-left: 142px;
-  padding-right: 142px;
+  padding-left: 146.5px;
+  padding-right: 146.5px;
   margin: 2px;
 }
